@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header :esta_logado="true" />
     <FirstComponent />
     <LifeCycle />
     <Person />

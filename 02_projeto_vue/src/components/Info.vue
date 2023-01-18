@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>{{ email }}</p>
     <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidades</p>
     <p>Utilizo as seguintes linguagens para front-end</p>
@@ -31,11 +32,13 @@ export default {
   components: {
     Picture,
   },
+  props: {
+    email: String,
+    esta_trabalhando: Boolean
+  },
   data() {
     return {
-      esta_trabalhando: true,
       mostrar_email: false,
-      email: "charles_humberto@hotmail.com.br",
       meu_link: "https://portfolio-charles-silva.netlify.app/",
       texto_botao: "Mostrar Email",
       frontend_technologies: ['Javascript', 'Typescript', 'Vue'],

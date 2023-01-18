@@ -13,18 +13,17 @@
       Para acessar o meu portifólio
       <a v-bind:href="meu_link">Basta clicar aqui</a>
     </p>
-    <Picture/>
+    <Picture />
   </div>
 </template>
 
 <script>
-
-import Picture from './Picture.vue';
+import Picture from "./Picture";
 export default {
   name: "info",
-  components:{
-    Picture
-  }
+  components: {
+    Picture,
+  },
   data() {
     return {
       esta_trabalhando: true,

@@ -32,6 +32,6 @@ a {
 }
 
 a:hover {
-    color: turquoise;
+    color: red;
 }
 </style>

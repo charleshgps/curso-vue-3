@@ -8,6 +8,9 @@
       <li>Typescript</li>
       <li>Vue</li>
     </ul>
+    <div>
+      <button @click="showEmail">{{ texto_botao }}</button>
+    </div>
     <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
     <p>
       Para acessar o meu portifólio
@@ -27,10 +30,21 @@ export default {
   data() {
     return {
       esta_trabalhando: true,
-      mostrar_email: true,
+      mostrar_email: false,
       email: "charles_humberto@hotmail.com.br",
       meu_link: "https://portfolio-charles-silva.netlify.app/",
+      texto_botao: "Mostrar Email"
     };
   },
+  methods: {
+    showEmail() {
+      this.mostrar_email = !this.mostrar_email
+      if (!this.mostrar_email) {
+        this.texto_botao = "Mostrar Email"
+      } else {
+        this.texto_botao = "Esconder Email"
+      }
+    }
+  }
 };
 </script>
